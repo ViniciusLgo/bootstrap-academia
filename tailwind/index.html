@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,34 +9,100 @@
   <!-- Tailwind via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="bg-neutral-950 text-neutral-100">
 
-    <main id="conteudo">
+  <main id="conteudo">
 
     <section id="inicio" class="scroll-mt-20" aria-label="Destaques da academia">
       <h1 class="sr-only">PulseFit Academia com Tailwind CSS</h1>
+
+      <div class="relative h-[60vh] min-h-[300px] overflow-hidden">
+
+        <!-- Slide 1 -->
+        <div class="slide absolute inset-0 transition-all duration-700">
+          <img src="img/slide1.jpg" alt="academia1"
+            class="w-full h-full object-cover brightness-50">
+          <div class="absolute inset-x-0 bottom-14 px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">Musculação completa</h2>
+            <p class="hidden md:block mt-2 text-lg text-neutral-200">Equipamentos novos e professores acompanhando seu
+              treino.</p>
+            <a href="#planos"
+              class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Ver
+              planos</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide absolute inset-0 transition-all duration-700 opacity-0 invisible">
+          <img src="img/slide2.jpg" alt="academia2"
+            class="w-full h-full object-cover brightness-50">
+          <div class="absolute inset-x-0 bottom-14 px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">Aulas coletivas</h2>
+            <p class="hidden md:block mt-2 text-lg text-neutral-200">Spinning, dança, yoga e muito mais, todos os dias.
+            </p>
+            <a href="#horarios"
+              class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Ver
+              horários</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide absolute inset-0 transition-all duration-700 opacity-0 invisible">
+          <img src="img/slide3.jpg" alt="academia3"
+            class="w-full h-full object-cover brightness-50">
+          <div class="absolute inset-x-0 bottom-14 px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">Treino funcional</h2>
+            <p class="hidden md:block mt-2 text-lg text-neutral-200">Ganhe força e condicionamento em treinos dinâmicos.
+            </p>
+            <a href="#matricula"
+              class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Aula
+              grátis</a>
+          </div>
+        </div>
+
+        <!-- Setas -->
+        <button id="slideAnterior" type="button" aria-label="Slide anterior"
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white text-2xl hover:bg-black/80">
+          ‹
+        </button>
+        <button id="slideProximo" type="button" aria-label="Próximo slide"
+          class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white text-2xl hover:bg-black/80">
+          ›
+        </button>
+
+        <!-- Bolinhas -->
+        <div class="absolute bottom-4 inset-x-0 flex justify-center gap-2">
+          <button type="button" class="bolinha w-8 h-1.5 rounded bg-white" aria-label="Slide 1: Musculação"
+            aria-current="true"></button>
+          <button type="button" class="bolinha w-8 h-1.5 rounded bg-white/40" aria-label="Slide 2: Aulas coletivas"
+            aria-current="false"></button>
+          <button type="button" class="bolinha w-8 h-1.5 rounded bg-white/40" aria-label="Slide 3: Treino funcional"
+            aria-current="false"></button>
+        </div>
+      </div>
 
     </section>
 
     <section id="planos" class="py-16 scroll-mt-20" aria-labelledby="titulo-planos">
       <div class="max-w-6xl mx-auto px-4">
         <h2 id="titulo-planos" class="text-3xl font-bold text-center mb-10">Nossos planos</h2>
-      
-    </div>
+
+      </div>
     </section>
 
     <section id="horarios" class="py-16 bg-neutral-900 scroll-mt-20" aria-labelledby="titulo-horarios">
       <div class="max-w-6xl mx-auto px-4">
         <h2 id="titulo-horarios" class="text-3xl font-bold text-center mb-10">Grade de aulas</h2>
 
-    </div>
+      </div>
     </section>
 
     <section id="matricula" class="py-16 scroll-mt-20" aria-labelledby="titulo-matricula">
       <div class="max-w-6xl mx-auto px-4">
         <h2 id="titulo-matricula" class="text-3xl font-bold text-center mb-10">Agende sua aula experimental</h2>
 
-    </div>
+      </div>
     </section>
   </main>
 
@@ -43,8 +110,7 @@
     <p>2026 PulseFit Academia Tailwind</p>
   </footer>
 
-
-  
   <script src="script.js"></script>
 </body>
+
 </html>
