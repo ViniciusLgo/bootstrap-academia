@@ -11,258 +11,310 @@
 </head>
 
 <body class="bg-neutral-950 text-neutral-100">
+  <a href="#conteudo"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-yellow-400 focus:text-black focus:px-4 focus:py-2 focus:rounded">
+    Pular para o conteúdo
+  </a>
 
-  <main id="conteudo">
+  <header class="sticky top-0 z-40 bg-black border-b border-yellow-400">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between" aria-label="Menu principal">
 
-    <section id="inicio" class="scroll-mt-20" aria-label="Destaques da academia">
-      <h1 class="sr-only">PulseFit Academia com Tailwind CSS</h1>
+      <a href="#inicio" class="text-xl font-bold text-yellow-400">PulseFit</a>
 
-      <div class="relative h-[60vh] min-h-[300px] overflow-hidden">
+      <button id="botaoMenu" type="button"
+        class="lg:hidden px-3 py-1 text-2xl text-neutral-200 border border-neutral-700 rounded"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu de navegação">
+        ☰
+      </button>
 
-        <!-- Slide 1 -->
-        <div class="slide absolute inset-0 transition-all duration-700">
-          <img src="img/slide1.jpg" alt="academia1" class="w-full h-full object-cover brightness-50">
-          <div class="absolute inset-x-0 bottom-14 px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-white">Musculação completa</h2>
-            <p class="hidden md:block mt-2 text-lg text-neutral-200">Equipamentos novos e professores acompanhando seu
-              treino.</p>
-            <a href="#planos"
-              class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Ver
-              planos</a>
-          </div>
-        </div>
+      <div id="menuPrincipal" class="hidden w-full lg:flex lg:w-auto lg:items-center">
+        <ul class="flex flex-col lg:flex-row lg:gap-6 py-3 lg:py-0">
+          <li><a href="#inicio" class="block py-2 text-neutral-300 hover:text-yellow-400">Início</a></li>
+          <li><a href="#planos" class="block py-2 text-neutral-300 hover:text-yellow-400">Planos</a></li>
+          <li><a href="#horarios" class="block py-2 text-neutral-300 hover:text-yellow-400">Horários</a></li>
+          <li><a href="#matricula" class="block py-2 text-neutral-300 hover:text-yellow-400">Matrícula</a></li>
+        </ul>
+        <a href="#matricula"
+          class="inline-block mb-3 lg:mb-0 lg:ml-6 bg-yellow-400 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-300">
+          Aula grátis
+        </a>
+      </div>
+    </nav>
+  </header>
+  <section id="inicio" class="scroll-mt-20" aria-label="Destaques da academia">
+    <h1 class="sr-only">PulseFit Academia com Tailwind CSS</h1>
 
-        <!-- Slide 2 -->
-        <div class="slide absolute inset-0 transition-all duration-700 opacity-0 invisible">
-          <img src="img/slide2.jpg" alt="academia2" class="w-full h-full object-cover brightness-50">
-          <div class="absolute inset-x-0 bottom-14 px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-white">Aulas coletivas</h2>
-            <p class="hidden md:block mt-2 text-lg text-neutral-200">Spinning, dança, yoga e muito mais, todos os dias.
-            </p>
-            <a href="#horarios"
-              class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Ver
-              horários</a>
-          </div>
-        </div>
+    <div class="relative h-[60vh] min-h-[300px] overflow-hidden">
 
-        <!-- Slide 3 -->
-        <div class="slide absolute inset-0 transition-all duration-700 opacity-0 invisible">
-          <img src="img/slide3.jpg" alt="academia3" class="w-full h-full object-cover brightness-50">
-          <div class="absolute inset-x-0 bottom-14 px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-white">Treino funcional</h2>
-            <p class="hidden md:block mt-2 text-lg text-neutral-200">Ganhe força e condicionamento em treinos dinâmicos.
-            </p>
-            <a href="#matricula"
-              class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Aula
-              grátis</a>
-          </div>
-        </div>
-
-        <!-- Setas -->
-        <button id="slideAnterior" type="button" aria-label="Slide anterior"
-          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white text-2xl hover:bg-black/80">
-          ‹
-        </button>
-        <button id="slideProximo" type="button" aria-label="Próximo slide"
-          class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white text-2xl hover:bg-black/80">
-          ›
-        </button>
-
-        <!-- Bolinhas -->
-        <div class="absolute bottom-4 inset-x-0 flex justify-center gap-2">
-          <button type="button" class="bolinha w-8 h-1.5 rounded bg-white" aria-label="Slide 1: Musculação"
-            aria-current="true"></button>
-          <button type="button" class="bolinha w-8 h-1.5 rounded bg-white/40" aria-label="Slide 2: Aulas coletivas"
-            aria-current="false"></button>
-          <button type="button" class="bolinha w-8 h-1.5 rounded bg-white/40" aria-label="Slide 3: Treino funcional"
-            aria-current="false"></button>
+      <!-- Slide 1 -->
+      <div class="slide absolute inset-0 transition-all duration-700">
+        <img src="img/slide1.jpg" alt="academia1" class="w-full h-full object-cover brightness-50">
+        <div class="absolute inset-x-0 bottom-14 px-4 text-center">
+          <h2 class="text-3xl md:text-5xl font-bold text-white">Musculação completa</h2>
+          <p class="hidden md:block mt-2 text-lg text-neutral-200">Equipamentos novos e professores acompanhando seu
+            treino.</p>
+          <a href="#planos"
+            class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Ver
+            planos</a>
         </div>
       </div>
 
-    </section>
-
-    <section id="planos" class="py-16 scroll-mt-20" aria-labelledby="titulo-planos">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 id="titulo-planos" class="text-3xl font-bold text-center mb-10">Nossos planos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          <div class="flex flex-col bg-neutral-900 border border-neutral-800 rounded-xl p-6">
-            <h3 class="text-2xl font-semibold">Básico</h3>
-            <p class="mt-2 text-4xl font-bold text-yellow-400">R$ 79,90<span
-                class="text-base text-neutral-400">/mês</span></p>
-            <ul class="mt-4 flex-1 space-y-2 list-disc list-inside text-neutral-300">
-              <li>Musculação</li>
-              <li>Horário livre</li>
-              <li>1 avaliação física</li>
-            </ul>
-            <button type="button"
-              class="abrir-modal mt-6 w-full py-2 rounded-lg font-semibold border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black">
-              Quero esse plano
-            </button>
-          </div>
-
-          <div class="flex flex-col bg-neutral-900 border border-yellow-400 rounded-xl p-6">
-            <span class="self-start mb-2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">Mais
-              escolhido</span>
-            <h3 class="text-2xl font-semibold">Plus</h3>
-            <p class="mt-2 text-4xl font-bold text-yellow-400">R$ 119,90<span
-                class="text-base text-neutral-400">/mês</span></p>
-            <ul class="mt-4 flex-1 space-y-2 list-disc list-inside text-neutral-300">
-              <li>Musculação</li>
-              <li>Aulas coletivas</li>
-              <li>Avaliação física mensal</li>
-            </ul>
-            <button type="button"
-              class="abrir-modal mt-6 w-full py-2 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300">
-              Quero esse plano
-            </button>
-          </div>
-
-          <div class="flex flex-col bg-neutral-900 border border-neutral-800 rounded-xl p-6">
-            <h3 class="text-2xl font-semibold">Premium</h3>
-            <p class="mt-2 text-4xl font-bold text-yellow-400">R$ 169,90<span
-                class="text-base text-neutral-400">/mês</span></p>
-            <ul class="mt-4 flex-1 space-y-2 list-disc list-inside text-neutral-300">
-              <li>Tudo do plano Plus</li>
-              <li>Personal 2x por semana</li>
-              <li>Acesso a todas as unidades</li>
-            </ul>
-            <button type="button"
-              class="abrir-modal mt-6 w-full py-2 rounded-lg font-semibold border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black">
-              Quero esse plano
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section id="horarios" class="py-16 bg-neutral-900 scroll-mt-20" aria-labelledby="titulo-horarios">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 id="titulo-horarios" class="text-3xl font-bold text-center mb-10">Grade de aulas</h2>
-
-        <div class="overflow-x-auto rounded-lg border border-neutral-700">
-          <table class="w-full min-w-[600px] text-left">
-            <caption class="caption-bottom py-3 text-sm text-neutral-400">Grade de aulas coletivas de segunda a sábado
-            </caption>
-            <thead class="bg-yellow-400 text-black">
-              <tr class="*:px-4 *:py-3">
-                <th scope="col">Horário</th>
-                <th scope="col">Aula</th>
-                <th scope="col">Professor</th>
-                <th scope="col">Dias</th>
-                <th scope="col">Sala</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
-                <td>06:00</td>
-                <td>Spinning</td>
-                <td>Carla</td>
-                <td>Seg, Qua, Sex</td>
-                <td>Sala 1</td>
-              </tr>
-              <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
-                <td>07:00</td>
-                <td>Funcional</td>
-                <td>Rafael</td>
-                <td>Ter, Qui</td>
-                <td>Área externa</td>
-              </tr>
-              <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
-                <td>12:00</td>
-                <td>Abdominal</td>
-                <td>Juliana</td>
-                <td>Seg a Sex</td>
-                <td>Sala 2</td>
-              </tr>
-              <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
-                <td>18:00</td>
-                <td>Zumba</td>
-                <td>Patrícia</td>
-                <td>Seg, Qua, Sex</td>
-                <td>Sala 1</td>
-              </tr>
-              <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
-                <td>19:00</td>
-                <td>Muay Thai</td>
-                <td>Diego</td>
-                <td>Ter, Qui</td>
-                <td>Sala 3</td>
-              </tr>
-              <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
-                <td>09:00</td>
-                <td>Yoga</td>
-                <td>Marina</td>
-                <td>Sábado</td>
-                <td>Sala 2</td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Slide 2 -->
+      <div class="slide absolute inset-0 transition-all duration-700 opacity-0 invisible">
+        <img src="img/slide2.jpg" alt="academia2" class="w-full h-full object-cover brightness-50">
+        <div class="absolute inset-x-0 bottom-14 px-4 text-center">
+          <h2 class="text-3xl md:text-5xl font-bold text-white">Aulas coletivas</h2>
+          <p class="hidden md:block mt-2 text-lg text-neutral-200">Spinning, dança, yoga e muito mais, todos os dias.
+          </p>
+          <a href="#horarios"
+            class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Ver
+            horários</a>
         </div>
       </div>
-    </section>
 
-    <section id="matricula" class="py-16 scroll-mt-20" aria-labelledby="titulo-matricula">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 id="titulo-matricula" class="text-3xl font-bold text-center mb-10">Agende sua aula experimental</h2>
+      <!-- Slide 3 -->
+      <div class="slide absolute inset-0 transition-all duration-700 opacity-0 invisible">
+        <img src="img/slide3.jpg" alt="academia3" class="w-full h-full object-cover brightness-50">
+        <div class="absolute inset-x-0 bottom-14 px-4 text-center">
+          <h2 class="text-3xl md:text-5xl font-bold text-white">Treino funcional</h2>
+          <p class="hidden md:block mt-2 text-lg text-neutral-200">Ganhe força e condicionamento em treinos dinâmicos.
+          </p>
+          <a href="#matricula"
+            class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-5 py-2 rounded hover:bg-yellow-300">Aula
+            grátis</a>
+        </div>
+      </div>
 
-        <form class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label for="nome" class="block mb-1 font-medium">Nome completo</label>
-            <input type="text" id="nome" name="nome" required minlength="3"
-              class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-          </div>
+      <!-- Setas -->
+      <button id="slideAnterior" type="button" aria-label="Slide anterior"
+        class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white text-2xl hover:bg-black/80">
+        ‹
+      </button>
+      <button id="slideProximo" type="button" aria-label="Próximo slide"
+        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white text-2xl hover:bg-black/80">
+        ›
+      </button>
 
-          <div>
-            <label for="email" class="block mb-1 font-medium">E-mail</label>
-            <input type="email" id="email" name="email" required
-              class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-          </div>
+      <!-- Bolinhas -->
+      <div class="absolute bottom-4 inset-x-0 flex justify-center gap-2">
+        <button type="button" class="bolinha w-8 h-1.5 rounded bg-white" aria-label="Slide 1: Musculação"
+          aria-current="true"></button>
+        <button type="button" class="bolinha w-8 h-1.5 rounded bg-white/40" aria-label="Slide 2: Aulas coletivas"
+          aria-current="false"></button>
+        <button type="button" class="bolinha w-8 h-1.5 rounded bg-white/40" aria-label="Slide 3: Treino funcional"
+          aria-current="false"></button>
+      </div>
+    </div>
 
-          <div>
-            <label for="telefone" class="block mb-1 font-medium">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(71) 99999-9999" required
-              class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-          </div>
+  </section>
 
-          <div>
-            <label for="plano" class="block mb-1 font-medium">Plano de interesse</label>
-            <select id="plano" name="plano" required
-              class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-              <option value="">Escolha um plano</option>
-              <option value="basico">Básico</option>
-              <option value="plus">Plus</option>
-              <option value="premium">Premium</option>
-            </select>
-          </div>
+  <section id="planos" class="py-16 scroll-mt-20" aria-labelledby="titulo-planos">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 id="titulo-planos" class="text-3xl font-bold text-center mb-10">Nossos planos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          <div class="md:col-span-2">
-            <label for="objetivo" class="block mb-1 font-medium">Qual é o seu objetivo?</label>
-            <textarea id="objetivo" name="objetivo" rows="3"
-              placeholder="Ex.: perder peso, ganhar massa, condicionamento..."
-              class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
-          </div>
-
-          <div class="md:col-span-2 flex items-center gap-2">
-            <input type="checkbox" id="termos" name="termos" required class="w-4 h-4 accent-yellow-400">
-            <label for="termos">Aceito receber contato da academia</label>
-          </div>
-
-          <button type="submit"
-            class="md:col-span-2 w-full py-3 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300">
-            Agendar aula grátis
+        <div class="flex flex-col bg-neutral-900 border border-neutral-800 rounded-xl p-6">
+          <h3 class="text-2xl font-semibold">Básico</h3>
+          <p class="mt-2 text-4xl font-bold text-yellow-400">R$ 79,90<span
+              class="text-base text-neutral-400">/mês</span></p>
+          <ul class="mt-4 flex-1 space-y-2 list-disc list-inside text-neutral-300">
+            <li>Musculação</li>
+            <li>Horário livre</li>
+            <li>1 avaliação física</li>
+          </ul>
+          <button type="button"
+            class="abrir-modal mt-6 w-full py-2 rounded-lg font-semibold border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black">
+            Quero esse plano
           </button>
-        </form>
+        </div>
+
+        <div class="flex flex-col bg-neutral-900 border border-yellow-400 rounded-xl p-6">
+          <span class="self-start mb-2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">Mais
+            escolhido</span>
+          <h3 class="text-2xl font-semibold">Plus</h3>
+          <p class="mt-2 text-4xl font-bold text-yellow-400">R$ 119,90<span
+              class="text-base text-neutral-400">/mês</span></p>
+          <ul class="mt-4 flex-1 space-y-2 list-disc list-inside text-neutral-300">
+            <li>Musculação</li>
+            <li>Aulas coletivas</li>
+            <li>Avaliação física mensal</li>
+          </ul>
+          <button type="button"
+            class="abrir-modal mt-6 w-full py-2 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300">
+            Quero esse plano
+          </button>
+        </div>
+
+        <div class="flex flex-col bg-neutral-900 border border-neutral-800 rounded-xl p-6">
+          <h3 class="text-2xl font-semibold">Premium</h3>
+          <p class="mt-2 text-4xl font-bold text-yellow-400">R$ 169,90<span
+              class="text-base text-neutral-400">/mês</span></p>
+          <ul class="mt-4 flex-1 space-y-2 list-disc list-inside text-neutral-300">
+            <li>Tudo do plano Plus</li>
+            <li>Personal 2x por semana</li>
+            <li>Acesso a todas as unidades</li>
+          </ul>
+          <button type="button"
+            class="abrir-modal mt-6 w-full py-2 rounded-lg font-semibold border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black">
+            Quero esse plano
+          </button>
+        </div>
 
       </div>
-    </section>
+
+    </div>
+  </section>
+
+  <section id="horarios" class="py-16 bg-neutral-900 scroll-mt-20" aria-labelledby="titulo-horarios">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 id="titulo-horarios" class="text-3xl font-bold text-center mb-10">Grade de aulas</h2>
+
+      <div class="overflow-x-auto rounded-lg border border-neutral-700">
+        <table class="w-full min-w-[600px] text-left">
+          <caption class="caption-bottom py-3 text-sm text-neutral-400">Grade de aulas coletivas de segunda a sábado
+          </caption>
+          <thead class="bg-yellow-400 text-black">
+            <tr class="*:px-4 *:py-3">
+              <th scope="col">Horário</th>
+              <th scope="col">Aula</th>
+              <th scope="col">Professor</th>
+              <th scope="col">Dias</th>
+              <th scope="col">Sala</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
+              <td>06:00</td>
+              <td>Spinning</td>
+              <td>Carla</td>
+              <td>Seg, Qua, Sex</td>
+              <td>Sala 1</td>
+            </tr>
+            <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
+              <td>07:00</td>
+              <td>Funcional</td>
+              <td>Rafael</td>
+              <td>Ter, Qui</td>
+              <td>Área externa</td>
+            </tr>
+            <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
+              <td>12:00</td>
+              <td>Abdominal</td>
+              <td>Juliana</td>
+              <td>Seg a Sex</td>
+              <td>Sala 2</td>
+            </tr>
+            <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
+              <td>18:00</td>
+              <td>Zumba</td>
+              <td>Patrícia</td>
+              <td>Seg, Qua, Sex</td>
+              <td>Sala 1</td>
+            </tr>
+            <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
+              <td>19:00</td>
+              <td>Muay Thai</td>
+              <td>Diego</td>
+              <td>Ter, Qui</td>
+              <td>Sala 3</td>
+            </tr>
+            <tr class="*:px-4 *:py-3 odd:bg-neutral-950 even:bg-neutral-800 hover:bg-neutral-700">
+              <td>09:00</td>
+              <td>Yoga</td>
+              <td>Marina</td>
+              <td>Sábado</td>
+              <td>Sala 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="matricula" class="py-16 scroll-mt-20" aria-labelledby="titulo-matricula">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 id="titulo-matricula" class="text-3xl font-bold text-center mb-10">Agende sua aula experimental</h2>
+
+      <form class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="nome" class="block mb-1 font-medium">Nome completo</label>
+          <input type="text" id="nome" name="nome" required minlength="3"
+            class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+
+        <div>
+          <label for="email" class="block mb-1 font-medium">E-mail</label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+
+        <div>
+          <label for="telefone" class="block mb-1 font-medium">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(71) 99999-9999" required
+            class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        </div>
+
+        <div>
+          <label for="plano" class="block mb-1 font-medium">Plano de interesse</label>
+          <select id="plano" name="plano" required
+            class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option value="">Escolha um plano</option>
+            <option value="basico">Básico</option>
+            <option value="plus">Plus</option>
+            <option value="premium">Premium</option>
+          </select>
+        </div>
+
+        <div class="md:col-span-2">
+          <label for="objetivo" class="block mb-1 font-medium">Qual é o seu objetivo?</label>
+          <textarea id="objetivo" name="objetivo" rows="3"
+            placeholder="Ex.: perder peso, ganhar massa, condicionamento..."
+            class="w-full px-3 py-2 rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+        </div>
+
+        <div class="md:col-span-2 flex items-center gap-2">
+          <input type="checkbox" id="termos" name="termos" required class="w-4 h-4 accent-yellow-400">
+          <label for="termos">Aceito receber contato da academia</label>
+        </div>
+
+        <button type="submit"
+          class="md:col-span-2 w-full py-3 rounded-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-300">
+          Agendar aula grátis
+        </button>
+      </form>
+
+    </div>
+  </section>
   </main>
 
   <footer class="bg-black text-neutral-400 py-6 px-4 text-center text-sm">
     <p>2026 PulseFit Academia Tailwind</p>
   </footer>
+
+  <dialog id="modalPlano" aria-labelledby="tituloModalPlano"
+    class="m-auto w-[90%] max-w-md rounded-xl bg-neutral-900 text-neutral-100 backdrop:bg-black/60">
+    <div class="flex items-center justify-between px-5 py-4 border-b border-neutral-700">
+      <h2 id="tituloModalPlano" class="text-lg font-semibold">Como contratar seu plano</h2>
+      <button type="button" class="fechar-modal text-2xl leading-none text-neutral-400 hover:text-white"
+        aria-label="Fechar">&times;</button>
+    </div>
+
+    <div class="px-5 py-4">
+      <p>Ótima escolha! A matrícula é feita em 3 passos simples:</p>
+      <ol class="mt-3 space-y-1 list-decimal list-inside text-neutral-300">
+        <li>Agende sua aula experimental grátis no formulário da página.</li>
+        <li>Venha conhecer a academia e treinar com um professor.</li>
+        <li>Gostou? Finalize a matrícula na recepção.</li>
+      </ol>
+    </div>
+
+    <div class="flex justify-end gap-2 px-5 py-4 border-t border-neutral-700">
+      <button type="button"
+        class="fechar-modal px-4 py-2 rounded-lg bg-neutral-700 hover:bg-neutral-600">Fechar</button>
+      <button type="button"
+        class="fechar-modal px-4 py-2 rounded-lg bg-yellow-400 text-black font-semibold hover:bg-yellow-300">Entendi</button>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

@@ -61,3 +61,27 @@ bolinhas.forEach(function (bolinha, i) {
 setInterval(function () {
   mostrarSlide(slideAtual + 1);
 }, 5000);
+
+// MODAL
+const modal = document.getElementById('modalPlano');
+
+// Quero esse plano "abrem o modal"
+document.querySelectorAll('.abrir-modal').forEach(function (botao) {
+  botao.addEventListener('click', function () {
+    modal.showModal();
+  });
+});
+
+// botões X, Fechar e Entendi fecham o modal
+document.querySelectorAll('.fechar-modal').forEach(function (botao) {
+  botao.addEventListener('click', function () {
+    modal.close();
+  });
+});
+
+// clicar no fundo escuro também fecha
+modal.addEventListener('click', function (evento) {
+  if (evento.target === modal) {
+    modal.close();
+  }
+});
