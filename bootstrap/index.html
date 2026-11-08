@@ -13,8 +13,32 @@
 <body>
   <a href="#conteudo" class="visually-hidden-focusable">Pular para o conteúdo</a>
 
-  <header>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-black border-bottom border-warning" aria-label="Menu principal">
+      <div class="container">
+        <!-- Logo/nome do site -->
+        <a class="navbar-brand fw-bold text-warning" href="#inicio">PulseFit</a>
 
+        <!-- Botão 3 listras telefone -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Conteudo no celular -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#horarios">Horários</a></li>
+            <li class="nav-item"><a class="nav-link" href="#matricula">Matrícula</a></li>
+          </ul>
+          <a class="btn btn-warning fw-semibold ms-lg-3 mb-2 mb-lg-0" href="#matricula">Aula grátis</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main id="conteudo">
