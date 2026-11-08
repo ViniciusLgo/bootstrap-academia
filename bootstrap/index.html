@@ -42,8 +42,68 @@
   </header>
 
   <main id="conteudo">
-    <section id="inicio" aria-label="Destaques da academia">
+   
+        <section id="inicio" aria-label="Destaques da academia">
+      <!-- Título principal da página escondido visualmente -->
+      <h1 class="visually-hidden">PulseFit Academia</h1>
 
+      <div id="carrosselDestaques" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicadores (bolinhas) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="0"
+                  class="active" aria-current="true" aria-label="Slide 1: Musculação"></button>
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="1"
+                  aria-label="Slide 2: Aulas coletivas"></button>
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="2"
+                  aria-label="Slide 3: Treino funcional"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="img/slide1.jpg" class="d-block w-100 carrossel-img"
+                 alt="Pessoa treinando com halteres na área de musculação">
+            <div class="carousel-caption">
+              <h2 class="fw-bold">Musculação completa</h2>
+              <p class="d-none d-md-block">Equipamentos novos e professores acompanhando seu treino.</p>
+              <a href="#planos" class="btn btn-warning">Ver planos</a>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="img/slide2.jpg" class="d-block w-100 carrossel-img"
+                 alt="academia 01">
+            <div class="carousel-caption">
+              <h2 class="fw-bold">Aulas coletivas</h2>
+              <p class="d-none d-md-block">Spinning, dança, yoga e muito mais, todos os dias.</p>
+              <a href="#horarios" class="btn btn-warning">Ver horários</a>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="img/slide3.jpg" class="d-block w-100 carrossel-img"
+                 alt="academia02">
+            <div class="carousel-caption">
+              <h2 class="fw-bold">Treino funcional</h2>
+              <p class="d-none d-md-block">Ganhe força e condicionamento em treinos dinâmicos.</p>
+              <a href="#matricula" class="btn btn-warning">Aula grátis</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles anterior / próximo -->
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#carrosselDestaques" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#carrosselDestaques" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
     </section>
 
     <section id="planos" class="py-5" aria-labelledby="titulo-planos">

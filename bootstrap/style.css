@@ -6,3 +6,11 @@ html {
 section {
   scroll-margin-top: 70px;
 }
+
+
+.carrossel-img {
+  height: 60vh;          /* 60% da altura da tela */
+  min-height: 300px;     /* nunca fica baixo demais no celular */
+  object-fit: cover;     /* corta as sobras em vez de esticar a foto */
+  filter: brightness(0.5); /* escurece a foto para o texto branco ficar visivel */
+}
